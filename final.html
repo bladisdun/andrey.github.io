@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planes de Suscripción</title>
+    <style>
+        body {
+            font-family: 'Lucida Sans', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+            background-image: url('blob:https://web.whatsapp.com/70c58d5f-4ee1-467f-a147-178018f7a1e1');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .plan-boton {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .plan-boton:hover {
+            background-color: #555;
+        }
+        /* Colores para cada plan */
+        .boton-diamante { background-color: #ff0000; }
+        .boton-rubi { background-color: #00ff00; }
+        .boton-gratuito { background-color: #0000ff; }
+
+        /* Secciones ocultas al inicio */
+        .plan-contenido {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+        .plan-contenido a {
+            display: block;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #333;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 0;
+            transition: background-color 0.3s;
+        }
+        .plan-contenido a:hover {
+            background-color: #555;
+        }
+    </style>
+    <script>
+        function mostrarContenido(plan) {
+            document.querySelectorAll('.plan-contenido').forEach(seccion => {
+                seccion.style.display = 'none'; // Oculta todas las secciones
+            });
+            document.getElementById(plan).style.display = 'block'; // Muestra la sección seleccionada
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Planes de Suscripción</h1>
+
+    <!-- Botones de Planes -->
+    <button class="plan-boton boton-diamante" onclick="mostrarContenido('contenido-diamante')">Plan Diamante</button>
+    <button class="plan-boton boton-rubi" onclick="mostrarContenido('contenido-rubi')">Plan Rubí</button>
+    <button class="plan-boton boton-gratuito" onclick="mostrarContenido('contenido-gratuito')">Plan Gratuito</button>
+
+    <!-- Contenido del Plan Diamante -->
+    <div id="contenido-diamante" class="plan-contenido">
+        <h2>Contenido del Plan Diamante</h2>
+        <a href="https://wordwall.net/es/resource/31324555/tecnolog%c3%ada/robot-man">Juegos</a>
+        <a href="httdrive.google.com/drive/folders/14JqV8XoHoIvYLYOF1mIce2gZZLZykR-S">Guías de Ayuda</a>
+        <a href="https://drive.ps://google.com/drive/folders/1dVradzmADYeZvehynXlcoI5UGutL_pXj">Material ICFES</a>
+        <a href="https://example.com/clases-virtuales">Clases Virtuales</a>
+        <a href="https://example.com/clases-grabadas">Clases Grabadas</a>
+        <a href="https://quizizz.com/admin/quiz/5c81f1b5365e46001b232c1d">Exámenes</a>
+    </div>
+
+    <!-- Contenido del Plan Rubí -->
+    <div id="contenido-rubi" class="plan-contenido">
+        <h2>Contenido del Plan Rubí</h2>
+        <a href="httdrive.google.com/drive/folders/14JqV8XoHoIvYLYOF1mIce2gZZLZykR-S">Guías de Ayuda</a>
+        <a href="https://drive.ps://google.com/drive/folders/1dVradzmADYeZvehynXlcoI5UGutL_pXj">Material ICFES</a>
+        <a href="https://example.com/clases-grabadas">Clases Grabadas</a>
+    </div>
+
+    <!-- Contenido del Plan Gratuito -->
+    <div id="contenido-gratuito" class="plan-contenido">
+        <h2>PRUEBA GRATIS</h2>
+        <a href="httdrive.google.com/drive/folders/14JqV8XoHoIvYLYOF1mIce2gZZLZykR-S">Guías de Ayuda</a>
+    </div>
+
+</body>
+</html>
